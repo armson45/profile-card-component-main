@@ -1,0 +1,95 @@
+@import url(/css/reset.css);
+@import url(/css/fonts.css);
+
+:root {
+   --dark-cyan: hsl(185, 75%, 39%);
+   --dark-blue-des: hsl(229, 23%, 23%);
+   --grayish-blue: hsl(227, 10%, 46%);
+   --dark-gray: hsl(0, 0%, 59%);
+
+   --fs-normal: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+   --fs-large: clamp(18px, 0.975rem + 0.125vw, 22px);
+   --mx-width: clamp(310px, 90%, 350px);
+}
+
+body {
+   font-family: 'Kumbh Sans', sans-serif;
+   font-weight: 700;
+   /* background: url(/images/bg-pattern-top.svg) no-repeat;
+   background-size: 50vmin;
+   background-position: left top; */
+   display: grid;
+   align-items: center;
+   background-color: var(--dark-cyan);
+   overflow: hidden;
+}
+
+/* main {
+   position: relative;
+}
+
+main::before {
+   content: url('/images/bg-pattern-top.svg');
+   position: absolute;
+   z-index: -10;
+   display: inline-block;
+   transform: translate(-50%, -75%);
+}
+
+main::after {
+   content: url('/images/bg-pattern-bottom.svg');
+   position: absolute;
+   z-index: -10;
+   display: inline-block;
+} */
+
+.user-profile {
+   max-width: var(--mx-width);
+   margin-inline: auto;
+   text-align: center;
+   border-radius: .8rem;
+   background-image: url(/images/bg-pattern-card.svg);
+   background-repeat: repeat-x;
+
+   /*I don't know if this is good but it works :)*/
+   background-size: 100% 25vmin 25vmax;
+   
+   background-color: white;
+}
+
+.user-info {
+   padding-top: 5em;
+   padding-bottom: 2rem;
+   font-size: var(--fs-normal);
+   & span {
+      font-size: var(--fs-normal);
+   }
+}
+
+.user-profile__photo {
+   margin-inline: auto;
+   width: 100px;
+   border: 5px solid white;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.user-stats {
+   padding: 1.5em 1em;
+   border-top: 1px solid var(--dark-gray);
+   display: flex;
+   justify-content: space-around;
+}
+
+.user-stats__item {
+   line-height: 1;
+   & p {
+      font-size: var(--fs-large);
+   }
+}
+
+.soft-accent {
+   font-size: .75rem;
+   color: var(--dark-gray);
+   font-weight: 400;
+}
